@@ -10,4 +10,11 @@ $(document).ready(function() {
             }
         });
     });
+}); 
+
+//Aplicando máscara aos campos
+$(document).ready(function() {
+    $("#cpf").mask("000.000.000-00");
+    $("#phone").mask("(00) 00000 - 0000");
+    $("#age").mask("00")
 });
