@@ -12,8 +12,7 @@ class Person
     }
 
     public function apresentar() {
-        echo "<p> Olá <b>{$this->nome}</b>!
-        <p> Você têm <b>{$this->idade}</b> anos.";
+        echo "Olá {$this->nome}!<br> Você têm {$this->idade} anos.";
     }
 }
 
