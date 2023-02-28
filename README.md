@@ -3,10 +3,10 @@
 
 # Imagens
 <p float="left">
-<p><b> FORMULÁRIO DE CADASTRO </b></p>
+<p> FORMULÁRIO DE CADASTRO </p>
 <img src="/images/cadastro.png?raw=true">
-<p><b> FORMULÁRIO DE CONSULTA </b></p>
+<p> FORMULÁRIO DE CONSULTA </p>
 <img src="/images/consulta.png?raw=true">
-<p><b> BANCO DE DADOS </b></p>
+<p> BANCO DE DADOS </p>
 <img src="/images/banco.png?raw=true">
 </p>
