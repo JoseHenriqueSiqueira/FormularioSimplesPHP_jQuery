@@ -1,5 +1,5 @@
-# FormularioSimples_PHP_JavaScript
- Criando um formulário com PHP / JavaScript que armazena dados e faz consultas em um Banco de Dados MySQL.
+# FormulariosPHP_MySQL_JavaScript
+ Criando formulários com PHP / JavaScript que armazena dados, faz consultas e atualiza informações em um Banco de Dados MySQL.
 
 # Imagens
 <p float="left">
