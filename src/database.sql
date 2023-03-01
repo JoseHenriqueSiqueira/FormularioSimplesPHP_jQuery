@@ -14,7 +14,7 @@ CREATE TABLE usuarios (
   senha VARCHAR(60) NOT NULL
 );
 
-/* Consulta os dados da tabela 'usuarios'.*/
+/* Consulta todos dados da tabela 'usuarios'.*/
 SELECT * FROM usuarios;
 
 /* Limpa os dados da tabela 'usuarios'.*/

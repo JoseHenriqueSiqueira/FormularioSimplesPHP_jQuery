@@ -5,17 +5,14 @@ body {
 
 .form-container {
   display: flex;
-  margin: 0 500px;
+  margin: 0 200px;
 }
 
-#postform,
-#getform {
+#postform, #getform, #updateform {
   width: 100%;
-}
-
-#getform{
   height: 100%;
 }
+
 
 form {
   background-color: #fff;
@@ -32,7 +29,7 @@ label {
   font-weight: bold;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="oldpass"], input[type="newpass"]{
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ddd;

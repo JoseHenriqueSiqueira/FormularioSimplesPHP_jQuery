@@ -3,10 +3,26 @@ $(document).ready(function() {
     // POST
     $('#postform').submit(function(e) {
         e.preventDefault(); // previne que a página seja atualizada
+        var dados = $('#postform').serializeArray() // serializa os dados do formulário
+        dados.push({name:'form', value:'postform'})
         $.ajax({
             type: "POST",
             url: "form.php",
-            data: $('#postform').serialize(), // serializa os dados do formulário
+            data: dados, 
+            success: function(result) {
+                $('#result').html(result); // insere a resposta na div result
+            }
+        });
+    });
+
+    $('#updateform').submit(function(e) {
+        e.preventDefault(); // previne que a página seja atualizada
+        var dados = $('#updateform').serializeArray() // serializa os dados do formulário
+        dados.push({name:'form', value:'updateform'})
+        $.ajax({
+            type: "POST",
+            url: "form.php",
+            data: dados, // serializa os dados do formulário
             success: function(result) {
                 $('#result').html(result); // insere a resposta na div result
             }
@@ -16,10 +32,12 @@ $(document).ready(function() {
     // GET
     $('#getform').submit(function(e) {
         e.preventDefault(); // previne que a página seja atualizada
+        var dados = $('#getform').serializeArray() // serializa os dados do formulário
+        dados.push({name:'form', value:'getform'})
         $.ajax({
             type: "GET",
             url: "form.php",
-            data: $('#getform').serialize(), // serializa os dados do formulário
+            data: dados, // serializa os dados do formulário
             success: function(result) {
                 $('#result').html(result); // insere a resposta na div result
             }
