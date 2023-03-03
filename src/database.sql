@@ -6,9 +6,9 @@ USE phpbase;
 
 /* Criando a tabela 'usuarios'.*/
 CREATE TABLE usuarios (
-  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(50) NOT NULL,
-  idade INT(2) NOT NULL,
+  idade INT NOT NULL,
   telefone VARCHAR(20) NOT NULL,
   cpf VARCHAR(14) NOT NULL,
   senha VARCHAR(60) NOT NULL
@@ -16,6 +16,12 @@ CREATE TABLE usuarios (
 
 /* Consulta todos dados da tabela 'usuarios'.*/
 SELECT * FROM usuarios;
+
+/*Inserir valores na tabela usuarios .*/
+INSERT INTO usuarios (nome, idade, telefone, cpf, senha) VALUES ( ?, ?, ?, ?, ?);
+
+/*Atualizar valores de um usuario baseado no seu CPF.*/
+UPDATE usuarios SET nome = ?, idade = ?, telefone = ?, cpf = ?, senha = ? where cpf = ?;
 
 /* Limpa os dados da tabela 'usuarios'.*/
 SET SQL_SAFE_UPDATES=0;
