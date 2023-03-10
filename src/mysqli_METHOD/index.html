@@ -13,7 +13,7 @@
   <body>
     <div class="form-container">
       <form class="p-3 was-validated" autocomplete="off" id="cadastro">
-        <p style="font-weight: bold; text-align: center;">CADASTRO</p>
+        <legend style="font-weight: bold;">CADASTRO</legend>
         <div class="col-md-12">
           <label lass="form-label">Nome</label>
           <input type="text" class="form-control" id="nome" name="nome" required>
@@ -28,7 +28,7 @@
         </div>
         <div class="col-md-12">
           <label class="form-label">CPF</label>
-          <input type="text" class="form-control cpf" id="cpf" name="cpf" required>
+          <input type="text" class="form-control cpf" id="cpf" name="cpf"  minlength="11" maxlength="11" placeholder="999.999.999-99" required>
         </div>
         <div class="col-md-12">
           <label class="form-label">Senha</label>
@@ -37,10 +37,10 @@
         <button class="btn btn-primary btn-spacing" type="submit">Enviar</button> 
       </form>
       <form class="p-3 was-validated" autocomplete="off" id="consulta">
-        <p style="font-weight: bold; text-align: center;">CONSULTA</p>
+        <legend style="font-weight: bold;">CONSULTA</legend>
         <div class="col-md-12">
           <label class="form-label">CPF</label>
-          <input type="text" class="form-control cpf" id="cpf" name="cpf" required>
+          <input type="text" class="form-control cpf" id="cpf" name="cpf"  minlength="11" maxlength="11" placeholder="999.999.999-99" required>
         </div>
         <div class="col-md-12">
           <label class="form-label">Senha</label>
@@ -49,10 +49,10 @@
         <button class="btn btn-primary btn-spacing" type="submit">Consulta</button> 
       </form>
       <form class="p-3 was-validated" autocomplete="off" id="atualizar">
-        <p style="font-weight: bold; text-align: center;">ATUALIZAÇÃO</p>
+        <legend style="font-weight: bold;">ATUALIZAÇÃO</legend>
         <div class="col-md-12">
           <label lass="form-label">CPF</label>
-          <input type="text" class="form-control cpf" id="cpf" name="cpf" required disabled>
+          <input type="text" class="form-control cpf" id="cpf" name="cpf"  minlength="11" maxlength="11" placeholder="999.999.999-99" required disabled>
         </div>
         <div class="col-md-12">
           <label lass="form-label">Nome</label>
