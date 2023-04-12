@@ -2,7 +2,7 @@
 
 require_once 'Usuario.php';
 
-class Formularios 
+class UsuarioController 
 {
     public function __construct($request)
     {
@@ -58,10 +58,7 @@ class Formularios
     {
         $dao = new UsuarioDAO();
         $usuario = new Usuario(null, null, null, $cpf, $senha);
-        foreach($dao->get_user($usuario) as $user_data);
-        {
-            $user_data = get_object_vars($user_data);
-        }
+        $user_data = $dao->get_user($usuario);
         echo json_encode($user_data);     
     }
 }

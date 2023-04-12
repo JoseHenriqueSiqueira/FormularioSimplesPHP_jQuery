@@ -12,7 +12,7 @@ $(document).ready(function() {
         dados.push({name:'formulario', value:'cadastro'})
         $.ajax({
             type: "POST",
-            url: "main.php",
+            url: "/PDO_METHOD/Controller/main.php",
             data: dados, 
             success: function(result) {
                 $('#result').html(result); // insere a resposta na div result
@@ -32,7 +32,7 @@ $(document).ready(function() {
         dados.push({name:'cpf', value:cpf},{name:'formulario', value:'atualizar'});
         $.ajax({
             type: "POST",
-            url: "main.php",
+            url: "/PDO_METHOD/Controller/main.php",
             data: dados, 
             success: function(result) {
                 $('#result').html(result); // insere a resposta na div result
@@ -50,8 +50,8 @@ $(document).ready(function() {
         var dados = $('#consulta').serializeArray() // serializa os dados do formulário
         dados.push({name:'formulario', value:'consulta'})
         $.ajax({
-            type: "GET",
-            url: "main.php",
+            type: "POST",
+            url: "/PDO_METHOD/Controller/main.php",
             data: dados, 
             success: function(result) {
                 try 
@@ -74,7 +74,7 @@ $(document).ready(function() {
                     $('#consulta input').each(function() {
                         $(this).val('');
                     });
-                }        
+                }      
             }
         });
     });

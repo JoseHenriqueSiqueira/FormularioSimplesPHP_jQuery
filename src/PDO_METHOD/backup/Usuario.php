@@ -4,10 +4,6 @@ require_once 'BaseDAO.php';
 
 class UsuarioDAO extends BaseDAO
 {
-    function get_all()
-    {
-        return parent::execQUERY("SELECT * FROM usuarios");
-    }
 
     function get_user(Usuario $usuario)
     {
@@ -42,11 +38,11 @@ class UsuarioDAO extends BaseDAO
 
 class Usuario 
 {
-    public $nome;
-    public $idade;
-    public $telefone;
-    public $cpf;
-    public $senha;
+    private $nome;
+    private $idade;
+    private $telefone;
+    private $cpf;
+    private $senha;
 
     public function __construct($nome, $idade, $telefone, $cpf, $senha)
     {
@@ -56,6 +52,59 @@ class Usuario
         $this->cpf = $cpf;
         $this->senha = $senha;
     }
+
+    // Getters
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    public function getIdade()
+    {
+        return $this->idade;
+    }
+
+    public function getTelefone()
+    {
+        return $this->telefone;
+    }
+
+    public function getCpf()
+    {
+        return $this->cpf;
+    }
+
+    public function getSenha()
+    {
+        return $this->senha;
+    }
+
+    // Setters
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
+    }
+
+    public function setIdade($idade)
+    {
+        $this->idade = $idade;
+    }
+
+    public function setTelefone($telefone)
+    {
+        $this->telefone = $telefone;
+    }
+
+    public function setCpf($cpf)
+    {
+        $this->cpf = $cpf;
+    }
+
+    public function setSenha($senha)
+    {
+        $this->senha = $senha;
+    }
+
 }
 
 ?>
